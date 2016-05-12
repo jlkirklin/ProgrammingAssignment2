@@ -32,7 +32,7 @@ cacheSolve <- function(x, ...) {
     }
     ## no cached value found, solve and cache
     data <- x$get()
-    inv <- solve(x$get)
+    inv <- solve(x$get, ...)
     x$setinverse(inv)
     inv
 }
